@@ -1,5 +1,25 @@
-.App {
+
+.Homepage {
   text-align: center;
+  background-image: url('./assets/DFG.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.Character{
+  background-image: url('./assets/DFG.jpeg');
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  align-content: center;
+  height: 100vh
+}
+
+.Character h1{
+  padding-top: 300px;
 }
 
 .App-logo {
