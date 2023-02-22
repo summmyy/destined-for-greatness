@@ -1,7 +1,8 @@
 import React from 'react'
 import Cards from './Cards'
 import { useNavigate} from 'react-router-dom';
-import { HStack, Box, Text, Heading } from '@chakra-ui/react';
+import { HStack, Box, Heading, IconButton } from '@chakra-ui/react';
+import { BiArrowBack} from "react-icons/bi";
 
 export default function Character(){
 
@@ -10,7 +11,7 @@ export default function Character(){
 
     const Characters =[
     {
-        getImageSrc: () => require ('./assets/thirdCharacter.jpeg'),
+        getImageSrc: () => require ('./assets/thirdCharacter.png'),
         name : 'Tanya' ,
         career : 'Musician',
         route : function handleClick(event){
@@ -19,7 +20,7 @@ export default function Character(){
         }
     },
     {
-        getImageSrc: () => require ('./assets/firstCharacter.jpeg'),
+        getImageSrc: () => require ('./assets/firstCharacter.png'),
         name : 'Ola' ,
         career : 'Model/Stylist',
         route : function handleClick(event){
@@ -28,7 +29,7 @@ export default function Character(){
         }
     },
     {
-        getImageSrc: () => require('./assets/fourthCharacter.jpeg'),
+        getImageSrc: () => require('./assets/fourthCharacter.png'),
         name : 'Esther' ,
         career : 'Actress',
         route : function handleClick(event){
@@ -37,7 +38,7 @@ export default function Character(){
         }
     },
     {
-        getImageSrc: () => require("./assets/secondCharacter.jpeg"),
+        getImageSrc: () => require("./assets/secondCharacter.png"),
         name : 'Joe' ,
         career : 'Athlete',
         route : function handleClick(event){
@@ -46,10 +47,27 @@ export default function Character(){
         }
     }
     ]
+
+
+  function Back(event){
+    event.preventDefault()
+    navigate('/')
+}
+
     return(
+    <>
+    <Box padding={2}>
+    <IconButton
+                colorScheme='red'
+                aria-label='Back button'
+                size='lg'
+                icon={<BiArrowBack/>}
+                onClick={Back}
+                />
+    </Box>
         <div className='Character'>
-        <Heading paddingTop={300} as="h1" size='xl' colorScheme="purple">Choose Your Destiny</Heading>
-        <HStack paddingLeft={100} >
+        <Heading paddingTop={300} as="h1" size='xl' color="red">Choose Your Destiny</Heading>
+        <HStack paddingLeft={320} >
             <Box
             display="grid"
             gridTemplateColumns="repeat(4,minmax(0,1fr))"
@@ -69,5 +87,6 @@ export default function Character(){
             </Box>
         </HStack>
         </div>
+    </>
     )
 }

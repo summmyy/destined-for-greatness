@@ -1,6 +1,4 @@
-
-.Homepage {
-  text-align: center;
+.Application{
   background-image: url('./assets/DFG.jpeg');
   background-size: cover;
   background-position: center;
@@ -8,18 +6,19 @@
   height: 100vh;
 }
 
+
+.Homepage {
+  text-align: center;
+}
+
 .Character{
-  background-image: url('./assets/DFG.jpeg');
-  background-size:cover;
-  background-position: center;
-  background-repeat: no-repeat;
   text-align: center;
   align-content: center;
   height: 100vh
 }
 
 .Character h1{
-  padding-top: 300px;
+  padding-top: 200px;
 }
 
 .App-logo {

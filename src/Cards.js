@@ -11,22 +11,22 @@ import React from "react";
     return (
       <VStack
         color="black"
-        backgroundColor="white"
+        backgroundColor="red"
         cursor="pointer"
         borderRadius="md"
       >
-        <Image borderRadius="md" src={imageSrc} alt={name} />
-        <VStack spacing={4} p={4} alignItems="flex-start">
+        <Image borderRadius="md" src={imageSrc} alt={name} width={220} height={220}/>
+        <VStack spacing={2} p={4} >
           <HStack spacing={10} alignItems="left">
             <Heading as="h2" size="md">
               {name}
             </Heading>
           </HStack>
-          <Text color="#64748b" fontSize="md">
+          <Text color="black" fontSize="md">
             {career}
           </Text>
           <HStack spacing={2} alignItems="center">
-            <Button onClick={route}>See more</Button>
+            <Button onClick={route}>Let's Go</Button>
           </HStack>
         </VStack>
       </VStack>

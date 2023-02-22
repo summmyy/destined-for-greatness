@@ -15,7 +15,7 @@ function Homepage (){
     return(
         <div className="Homepage">
             <ButtonGroup padding={480} >
-                <Button size='lg' colorScheme='purple' padding={50} onClick={handleClick}
+                <Button size='lg' colorScheme='red' padding={50} onClick={handleClick}
                         > Let The Journey Begin
                 </Button>
             </ButtonGroup>

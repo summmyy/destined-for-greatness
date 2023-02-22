@@ -11,7 +11,7 @@ import Sports from './Sports';
 
 function App() {
   return (
-    <>
+    <div className='Application'>
     <ChakraProvider>
     <Routes>
       <Route path='/' element={<Homepage />}/>
@@ -22,7 +22,7 @@ function App() {
       <Route path='/Sports' element={<Sports />}/>
     </Routes>
     </ChakraProvider>
-    </>
+    </div>
   );
 }
 
