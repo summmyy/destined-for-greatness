@@ -3,6 +3,7 @@ import Cards from './Cards'
 import { useNavigate} from 'react-router-dom';
 import { HStack, Box, Heading, IconButton } from '@chakra-ui/react';
 import { BiArrowBack} from "react-icons/bi";
+import { extendTheme } from '@chakra-ui/react'
 
 export default function Character(){
 
@@ -54,26 +55,38 @@ export default function Character(){
     navigate('/')
 }
 
+const breakpoints = {
+    sm: '320px',
+    md: '768px',
+    lg: '960px',
+    xl: '1200px',
+    '2xl': '1536px',
+  }
+
+  const theme = extendTheme({ breakpoints })
+
+
     return(
     <>
-    <Box padding={2}>
+    <Box padding={{base:4, sm:4, md:2}}>
     <IconButton
                 colorScheme='red'
                 aria-label='Back button'
-                size='lg'
+                size={{base:'md', sm:'md', md:'lg', lg:'lg'}}
                 icon={<BiArrowBack/>}
                 onClick={Back}
                 />
     </Box>
-        <div className='Character'>
-        <Heading paddingTop={300} as="h1" size='xl' color="red">Choose Your Destiny</Heading>
-        <HStack paddingLeft={320} >
+        <Box className='Character'>
+        <Heading paddingTop={{base:10,sm:10,md:150,lg:160}} as="h1" size={{base:'lg', sm:'lg', md:'xl'}} color="black" >Choose Your Destiny</Heading>
+        <HStack paddingLeft={{base:5,sm:5,md:200,lg:150}}>
             <Box
-            display="grid"
-            gridTemplateColumns="repeat(4,minmax(0,1fr))"
-            gridGap={20}
-            paddingLeft={100}
-            paddingTop={100}
+            display={{base:'grid', sm: 'grid', md:'flex'}}
+            gridTemplateColumns="repeat(2,minmax(0,1fr))"
+            gridGap={{base:5, sm:5, md:20}}
+            paddingLeft={0}
+            paddingTop={10}
+            padding={{base:3}}
             >
                 {Characters.map((character) => (
           <Cards
@@ -86,7 +99,7 @@ export default function Character(){
                 ))}
             </Box>
         </HStack>
-        </div>
+        </Box>
     </>
     )
 }

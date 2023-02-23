@@ -3,7 +3,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
 }
 
 
@@ -17,9 +16,9 @@
   height: 100vh
 }
 
-.Character h1{
+/* .Character h1{
   padding-top: 200px;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -53,5 +52,20 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Application{
+    background-size: contain;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .Application{
+    background-size: cover;
+    background-position: center;
+    height: 110vh;
   }
 }

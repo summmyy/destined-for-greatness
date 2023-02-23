@@ -2,6 +2,7 @@ import { useState, } from "react";
 import { VStack, RadioGroup, Radio, Stack, Heading, Button, Text, Box, HStack, IconButton } from "@chakra-ui/react";
 import { BiHome, BiArrowBack} from "react-icons/bi";
 import { useNavigate} from 'react-router-dom';
+import { extendTheme } from '@chakra-ui/react'
 
 
 export default function Music (){
@@ -68,10 +69,10 @@ export default function Music (){
         }
       });
       if( score >= 4){
-        alert('Congratulions!! You are now a Musician')
+        alert('Congratulions!! You are now a Musician 🥳')
       }
       else{
-      alert(`Your score is ${score} out of ${questions.length}. Try again :(`)
+      alert(`Your score is ${score} out of ${questions.length}. Try again 😢`)
       }
   }
 }
@@ -94,6 +95,16 @@ function Back(event){
     navigate('/Character')
 }
 
+const breakpoints = {
+    sm: '320px',
+    md: '768px',
+    lg: '960px',
+    xl: '1200px',
+    '2xl': '1536px',
+  }
+
+  const theme = extendTheme({ breakpoints })
+
   return (
     <>
         <HStack>
@@ -101,7 +112,7 @@ function Back(event){
             <IconButton
                 colorScheme='red'
                 aria-label='Back button'
-                size='lg'
+                size={{base:'md', sm:'md', md:'lg'}}
                 icon={<BiArrowBack/>}
                 onClick={Back}
                 />
@@ -110,28 +121,28 @@ function Back(event){
             <IconButton
                 colorScheme='red'
                 aria-label='Home button'
-                size='lg'
+                size={{base:'md', sm:'md', md:'lg'}}
                 icon={<BiHome/>}
                 onClick={Home}
             />
             </Box>
         </HStack>
-          <Heading as="h1" textAlign="center" paddingTop={200}>
+          <Heading as="h1" textAlign="center" paddingRight={10} paddingTop={180} color='black'>
             Music
           </Heading>
-          <Box paddingLeft={650}>
+          <Box paddingLeft={{base:10,sm:10,md:420}} alignContent='center'>
             <VStack
               color="black"
               backgroundColor="red"
               cursor="pointer"
               borderRadius="md"
-              width={600}
+              width={{base:300,sm:300,md:600}}
               height={400}
-              paddingTop={50}
+              paddingTop={10}
             >
               <Heading as="h2">{questions[currentQuestion].name}</Heading>
-              <Text>{questions[currentQuestion].question}</Text>
-              <RadioGroup onClick={handleChange} value={userAnswers[currentQuestion]}>
+              <Text textAlign='center'>{questions[currentQuestion].question}</Text>
+              <RadioGroup paddingBottom={3} onClick={handleChange} value={userAnswers[currentQuestion]}>
                 <Stack direction="column">
                   {questions[currentQuestion].option.map((option, index) => (
                     <Radio key={index} value={option}>
