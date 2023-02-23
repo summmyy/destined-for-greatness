@@ -29,7 +29,7 @@ function Homepage (){
                         paddingTop={{base:400, sm:350,}} 
                         alignItems={{base:'center', sm:'center', md:'center', lg:'center'}} >
                 <Button size={{base:'xl', sm:'xl', md:'xl', lg:'xl'}} colorScheme='red' color='white' padding={{base:25, sm:25, md:50, lg:50}} onClick={handleClick}
-                        > Let The Journey Begins
+                        > Let The Journey Begin
                 </Button>
             </ButtonGroup>
         </div>
