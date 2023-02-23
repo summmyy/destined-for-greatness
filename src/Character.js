@@ -72,14 +72,14 @@ const breakpoints = {
     <IconButton
                 colorScheme='red'
                 aria-label='Back button'
-                size={{base:'md', sm:'md', md:'lg', lg:'lg'}}
+                size={{base:'md', sm:'md', md:'lg', lg:'lg', xl:'lg'}}
                 icon={<BiArrowBack/>}
                 onClick={Back}
                 />
     </Box>
         <Box className='Character'>
         <Heading paddingTop={{base:10,sm:10,md:150,lg:160}} as="h1" size={{base:'lg', sm:'lg', md:'xl'}} color="black" >Choose Your Destiny</Heading>
-        <HStack paddingLeft={{base:5,sm:5,md:200,lg:150}}>
+        <HStack paddingLeft={{base:5,sm:5,md:200,lg:150, xl:350}}>
             <Box
             display={{base:'grid', sm: 'grid', md:'flex'}}
             gridTemplateColumns="repeat(2,minmax(0,1fr))"

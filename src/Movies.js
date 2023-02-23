@@ -130,7 +130,7 @@ const breakpoints = {
           <Heading as="h1" textAlign="center" paddingTop={180} color='black'>
             Movies
           </Heading>
-          <Box paddingLeft={{base:10,sm:10,md:420}} alignContent='center'>
+          <Box paddingLeft={{base:10,sm:10,md:420,xl:650}} alignContent='center'>
             <VStack
               color="black"
               backgroundColor="red"
