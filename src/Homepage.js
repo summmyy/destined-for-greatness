@@ -25,8 +25,8 @@ function Homepage (){
 
     return(
         <div className="Homepage">
-            <ButtonGroup paddingLeft={{base:5, sm:5, md:0, lg:0}} 
-                        paddingTop={{base:400, sm:350,}} 
+            <ButtonGroup paddingLeft={{base:5, sm:5, md:0, lg:0}}
+                        paddingTop={{base:400, sm:350,}}
                         alignItems={{base:'center', sm:'center', md:'center', lg:'center'}} >
                 <Button size={{base:'xl', sm:'xl', md:'xl', lg:'xl'}} colorScheme='red' color='white' padding={{base:25, sm:25, md:50, lg:50}} onClick={handleClick}
                         > Let The Journey Begin
