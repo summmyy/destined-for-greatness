@@ -79,9 +79,9 @@ const breakpoints = {
     </Box>
         <Box className='Character'>
         <Heading paddingTop={{base:10,sm:10,md:150,lg:160}} as="h1" size={{base:'lg', sm:'lg', md:'xl'}} color="black" >Choose Your Destiny</Heading>
-        <HStack paddingLeft={{base:5,sm:5,md:200,lg:150, xl:150}} paddingTop={10}>
+        <HStack paddingLeft={{base:5,sm:5,md:90,lg:150, xl:150}} paddingTop={10}>
             <Box
-            display={{base:'grid', sm: 'grid', md:'flex'}}
+            display={{base:'grid', sm: 'grid', md:'flex', lg:'flex'}}
             gridTemplateColumns="repeat(2,minmax(0,1fr))"
             gridGap={{base:5, sm:5, md:20}}
             paddingLeft={0}
