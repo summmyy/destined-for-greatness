@@ -69,8 +69,7 @@ export default function Music (){
         }
       });
       if( score >= 5){
-        alert(`Your score is ${score} out of ${questions.length}.
-        Congratulions!! You are now a Stylist/Model 🥳`)
+        alert(`Your score is ${score} out of ${questions.length}. Congratulions!! You are now a Stylist/Model 🥳`)
       }
       else{
       alert(`Your score is ${score} out of ${questions.length}. Try again 😢`)
