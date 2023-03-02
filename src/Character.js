@@ -13,7 +13,7 @@ export default function Character(){
     const Characters =[
     {
         getImageSrc: () => require ('./assets/thirdCharacter.png'),
-        name : 'Tanya' ,
+        name : 'Sole' ,
         career : 'Musician',
         route : function handleClick(event){
             event.preventDefault()
@@ -40,7 +40,7 @@ export default function Character(){
     },
     {
         getImageSrc: () => require("./assets/secondCharacter.png"),
-        name : 'Joe' ,
+        name : 'Steve' ,
         career : 'Athlete',
         route : function handleClick(event){
             event.preventDefault()
