@@ -35,8 +35,8 @@ export default function Music (){
       {
         name: "Question 5",
         question: "Which Nigerian artist has the most viewed video on Youtube",
-        option: ["Davido", "Wizkid", "Burna Boy", "Tekno"],
-        answer: "Tekno",
+        option: ["Davido", "Wizkid", "Burna Boy", "Rema"],
+        answer: "Rema",
       },
   ]);
   const [userAnswers, setUserAnswers] = useState([questions.length]);
@@ -68,8 +68,9 @@ export default function Music (){
           score++;
         }
       });
-      if( score >= 4){
-        alert('Congratulions!! You are now a Musician 🥳')
+      if( score >= 5){
+        alert(`Your score is ${score} out of ${questions.length}.
+        Congratulions!! You are now a Stylist/Model 🥳`)
       }
       else{
       alert(`Your score is ${score} out of ${questions.length}. Try again 😢`)

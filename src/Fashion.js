@@ -34,9 +34,9 @@ export default function Fashion (){
       },
       {
         name: "Question 5",
-        question: "Which supermodel popularized the 'smize'?",
-        option: ["Naomi Campbell", "Cindy Crawford", "Gigi Hadid", "Tyra Banks"],
-        answer: "Tyra Banks",
+        question: "The owl is used for which brand?",
+        option: ["OVO", "Corteiz", "Arc'teryx", "Roots"],
+        answer: "OVO",
       },
   ]);
   const [userAnswers, setUserAnswers] = useState([questions.length]);
@@ -68,8 +68,9 @@ export default function Fashion (){
           score++;
         }
       });
-      if( score >= 4){
-        alert('Congratulions!! You are now a Stylist/Model 🥳')
+      if( score >= 5){
+        alert(`Your score is ${score} out of ${questions.length}.
+        Congratulions!! You are now a Stylist/Model 🥳`)
       }
       else{
       alert(`Your score is ${score} out of ${questions.length}. Try again 😢`)

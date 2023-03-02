@@ -68,8 +68,9 @@ export default function Fashion (){
           score++;
         }
       });
-      if( score >= 4){
-        alert('Congratulions!! You are now an Actress 🥳')
+      if( score >= 5){
+        alert(`Your score is ${score} out of ${questions.length}.
+        Congratulions!! You are now a Stylist/Model 🥳`)
       }
       else{
       alert(`Your score is ${score} out of ${questions.length}. Try again 😢`)
